@@ -11,37 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
-  </div>
+  <div class="row">
+       <div class="col-lg-8 form-group">   
+           <%= form.label :nome, :class => 'control-label required' %>
+           <%= form.text_field :nome,  :class => 'form-control' %>
+       </div>
+   <div class="col-lg-8 form-group">   
+           <%= form.label :telefone, :class => 'control-label required' %>
+           <%= form.text_field :telefone,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :telefone %>
-    <%= form.text_field :telefone %>
-  </div>
+  <div class="col-lg-8 form-group">   
+           <%= form.label :cnpj_cpf, :class => 'control-label required' %>
+           <%= form.text_field :cnpj_cpf,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :cnpj_cpf %>
-    <%= form.text_field :cnpj_cpf %>
-  </div>
+   <div class="col-lg-8 form-group">   
+           <%= form.label :email, :class => 'control-label required' %>
+           <%= form.text_field :email,  :class => 'form-control' %>
+       </div>
+ <div class="col-lg-8 form-group">   
+           <%= form.label :cep, :class => 'control-label required' %>
+           <%= form.text_field :cep,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+ <div class="col-lg-8 form-group">   
+           <%= form.label :logradouro, :class => 'control-label required' %>
+           <%= form.text_field :logradouro,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :cep %>
-    <%= form.text_field :cep %>
-  </div>
-
-  <div class="field">
-    <%= form.label :logradouro %>
-    <%= form.text_field :logradouro %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+   <div class="row">
+          <div class="col-lg-7 form-group">  
+            <%= link_to 'Voltar', fornecedors_path, :class => "btn btn-primary colorprimarybtn"%>
+            <input type="submit" name="commit" class="btn btn-primary colorprimarybtn" value="Salvar " data-disable-with="Salvando" />
+          </div>
+      </div>
 <% end %>

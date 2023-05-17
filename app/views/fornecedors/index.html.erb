@@ -1,8 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="categdespesas index">
+      <h2>Fornecedores </h2>
+    <%= form_tag fornecedors_path( format:"html"), :method => 'get' do %>  
+      <div class="row">
+            <div class="col-lg-5  form-group">  
+                <%= text_field_tag :nome, params[:nome], :class => 'form-control', :placeholder=>"Digite o nome do Fornecedor para pesquisar" %>  
+              </div>
+              <div class="col-lg-2 form-group">
+                <%= submit_tag "Pesquisar", :class => "btn btn-primary colorprimarybtn" %>
+              </div>
 
-<h1>Fornecedors</h1>
-
-<table>
+           <div class="col-lg-2 form-group">  
+                  <span class="input-group-btn" style="display: inline-block;"><button class="btn btn-primary colorprimarybtn" type="button" onclick="javascript: location.href='<%= new_fornecedor_path %>';"><i class="fa fa-plus-circle"></i> Novo Fornecedor</button></span>
+            </div>
+        </div>
+      </div>
+      <%end%>
+    </div>
+<div class="table-responsive">
+  <table class="table table-hover table-striped" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
       <th>Nome</th>
@@ -35,3 +50,4 @@
 <br>
 
 <%= link_to 'New Fornecedor', new_fornecedor_path %>
+</div>

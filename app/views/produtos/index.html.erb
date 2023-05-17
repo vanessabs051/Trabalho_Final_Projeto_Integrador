@@ -1,6 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="categdespesas index">
+      <h2> Produtos </h2>
+    <%= form_tag produtos_path( format:"html"), :method => 'get' do %>  
+      <div class="row">
+            <div class="col-lg-5  form-group">  
+                <%= text_field_tag :nome, params[:nome], :class => 'form-control', :placeholder=>"Digite o nome do produto para pesquisar" %>  
+              </div>
+              <div class="col-lg-2 form-group">
+                <%= submit_tag "Pesquisar", :class => "btn btn-primary colorprimarybtn" %>
+              </div>
 
-<h1>Produtos</h1>
+           <div class="col-lg-2 form-group">  
+                  <span class="input-group-btn" style="display: inline-block;"><button class="btn btn-primary colorprimarybtn" type="button" onclick="javascript: location.href='<%= new_produto_path %>';"><i class="fa fa-plus-circle"></i> Novo produto</button></span>
+            </div>
 
 <table>
   <thead>

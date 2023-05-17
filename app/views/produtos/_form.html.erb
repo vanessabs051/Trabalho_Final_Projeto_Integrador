@@ -11,37 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
-  </div>
+  <div class="row">
+       <div class="col-lg-6 form-group">   
+           <%= form.label :nome, :class => 'control-label required' %>
+           <%= form.text_field :nome,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :quantidade %>
-    <%= form.number_field :quantidade %>
-  </div>
+   <div class="col-lg-6 form-group">   
+           <%= form.label :quantidade, :class => 'control-label required' %>
+           <%= form.text_field :quantidade,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :validade %>
-    <%= form.date_select :validade %>
-  </div>
+   <div class="col-lg-6 form-group">   
+           <%= form.label :validade, :class => 'control-label required' %>
+           <%= form.text_field :validade,  :class => 'form-control' %>
+       </div>
+   <div class="col-lg-6 form-group">   
+           <%= form.label :preco, :class => 'control-label required' %>
+           <%= form.text_field :preco,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :preco %>
-    <%= form.text_field :preco %>
-  </div>
+  <div class="col-lg-6 form-group">   
+           <%= form.label :marca, :class => 'control-label required' %>
+           <%= form.text_field :marca,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :marca %>
-    <%= form.text_field :marca %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fornecedor_id %>
-    <%= form.text_field :fornecedor_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+   <div class="row">
+          <div class="col-lg-7 form-group">  
+           
+            <%= link_to 'Voltar', fornecedors_path, :class => "btn btn-primary colorprimarybtn"%>
+             <input type="submit" name="commit" class="btn btn-primary colorprimarybtn" value="Salvar " data-disable-with="Salvando" />
+          </div>
+      </div>
 <% end %>

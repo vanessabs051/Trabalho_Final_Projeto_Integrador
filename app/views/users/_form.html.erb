@@ -11,17 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
-  </div>
+ <div class="row">
+       <div class="col-lg-6 form-group">   
+           <%= form.label :nome, :class => 'control-label required' %>
+           <%= form.text_field :nome,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :telefone %>
-    <%= form.text_field :telefone %>
-  </div>
+  <div class="col-lg-6 form-group">   
+           <%= form.label :telefone, :class => 'control-label required' %>
+           <%= form.text_field :telefone,  :class => 'form-control' %>
+       </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
+   <div class="row">
+          <div class="col-lg-7 form-group">  
+           
+            <%= link_to 'Voltar', users_path, :class => "btn btn-primary colorprimarybtn"%>
+             <input type="submit" name="commit" class="btn btn-primary colorprimarybtn" value="Salvar " data-disable-with="Salvando" />
+          </div>
+      </div>
 <% end %>
