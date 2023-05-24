@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Preco venda:</strong>
+  <%= @iten.preco_venda %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @iten.quantidade %>
+</p>
+
+<p>
+  <strong>Valor total:</strong>
+  <%= @iten.valor_total %>
+</p>
+
+<p>
+  <strong>Produto:</strong>
+  <%= @iten.produto_id %>
+</p>
+
+<p>
+  <strong>Venda:</strong>
+  <%= @iten.venda_id %>
+</p>
+
+<%= link_to 'Edit', edit_iten_path(@iten) %> |
+<%= link_to 'Back', itens_path %>

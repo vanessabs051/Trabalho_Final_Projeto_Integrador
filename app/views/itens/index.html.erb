@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Itens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Preco venda</th>
+      <th>Quantidade</th>
+      <th>Valor total</th>
+      <th>Produto</th>
+      <th>Venda</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itens.each do |iten| %>
+      <tr>
+        <td><%= iten.preco_venda %></td>
+        <td><%= iten.quantidade %></td>
+        <td><%= iten.valor_total %></td>
+        <td><%= iten.produto_id %></td>
+        <td><%= iten.venda_id %></td>
+        <td><%= link_to 'Show', iten %></td>
+        <td><%= link_to 'Edit', edit_iten_path(iten) %></td>
+        <td><%= link_to 'Destroy', iten, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Iten', new_iten_path %>

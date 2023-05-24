@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_17_121725) do
+ActiveRecord::Schema.define(version: 2023_05_24_115346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,18 @@ ActiveRecord::Schema.define(version: 2023_05_17_121725) do
     t.string "logradouro"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "itens", force: :cascade do |t|
+    t.float "preco_venda"
+    t.integer "quantidade"
+    t.float "valor_total"
+    t.bigint "produto_id", null: false
+    t.bigint "venda_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["produto_id"], name: "index_itens_on_produto_id"
+    t.index ["venda_id"], name: "index_itens_on_venda_id"
   end
 
   create_table "produtos", force: :cascade do |t|
@@ -52,5 +64,15 @@ ActiveRecord::Schema.define(version: 2023_05_17_121725) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "vendas", force: :cascade do |t|
+    t.date "data"
+    t.float "total"
+    t.float "total_pagar"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "itens", "produtos"
+  add_foreign_key "itens", "vendas"
   add_foreign_key "produtos", "fornecedors"
 end

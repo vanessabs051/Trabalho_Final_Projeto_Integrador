@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  preco_venda: 1.5
+  quantidade: 1
+  valor_total: 1.5
+  produto: one
+  venda: one
+
+two:
+  preco_venda: 1.5
+  quantidade: 1
+  valor_total: 1.5
+  produto: two
+  venda: two

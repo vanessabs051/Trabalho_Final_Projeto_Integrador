@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :itens
+  resources :vendas
   devise_for :users
   resources :produtos
   resources :fornecedors
