@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Data:</strong>
-  <%= @venda.data %>
-</p>
+<div class="row">  
+      <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Data</label>
+          <input readonly="true" class = 'form-control' value="<%= @venda.data %>" />  
+      </div>
 
-<p>
-  <strong>Total:</strong>
-  <%= @venda.total %>
-</p>
-
-<p>
-  <strong>Total pagar:</strong>
-  <%= @venda.total_pagar %>
-</p>
+<div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Total</label>
+          <input readonly="true" class = 'form-control' value="<%= @venda.total %>" />  
+      </div>
+<div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Total Pagar</label>
+          <input readonly="true" class = 'form-control' value="<%= @venda.total_pagar %>" />  
+      </div>
 
 <%= link_to 'Edit', edit_venda_path(@venda) %> |
 <%= link_to 'Back', vendas_path %>

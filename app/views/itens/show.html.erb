@@ -1,29 +1,28 @@
 <p id="notice"><%= notice %></p>
+<div class="row">  
+      <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Preço venda</label>
+          <input readonly="true" class = 'form-control' value="<%= @iten.preco_venda %>" />  
+      </div>
 
-<p>
-  <strong>Preco venda:</strong>
-  <%= @iten.preco_venda %>
-</p>
+ <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'> Quantidade</label>
+          <input readonly="true" class = 'form-control' value="<%= @iten.quantidade %>" />  
+      </div>
+ <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Valor Total</label>
+          <input readonly="true" class = 'form-control' value="<%= @iten.valor_total %>" />  
+      </div>
 
-<p>
-  <strong>Quantidade:</strong>
-  <%= @iten.quantidade %>
-</p>
+ <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Produto</label>
+          <input readonly="true" class = 'form-control' value="<%= @iten.produto_id%>" />  
+      </div>
 
-<p>
-  <strong>Valor total:</strong>
-  <%= @iten.valor_total %>
-</p>
-
-<p>
-  <strong>Produto:</strong>
-  <%= @iten.produto_id %>
-</p>
-
-<p>
-  <strong>Venda:</strong>
-  <%= @iten.venda_id %>
-</p>
+ <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Venda</label>
+          <input readonly="true" class = 'form-control' value="<%= @iten.venda_id %>" />  
+      </div>
 
 <%= link_to 'Edit', edit_iten_path(@iten) %> |
 <%= link_to 'Back', itens_path %>
