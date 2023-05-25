@@ -1,11 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Itens</h1>
+ <%= form_tag itens_path( format:"html"), :method => 'get' do %>  
+      <div class="row">
+            <div class="col-lg-5  form-group">  
+                <%= text_field_tag :nome, params[:nome], :class => 'form-control', :placeholder=>"Digite o nome do iten para pesquisar" %>  
+              </div>
+              <div class="col-lg-2 form-group">
+                <%= submit_tag "Pesquisar", :class => "btn btn-primary colorprimarybtn" %>
+              </div>
 
+           <div class="col-lg-2 form-group">  
+                  <span class="input-group-btn" style="display: inline-block;"><button class="btn btn-primary colorprimarybtn" type="button" onclick="javascript: location.href='<%= new_iten_path %>';"><i class="fa fa-plus-circle"></i> Novo Iten</button></span>
+            </div>
+<%end%>
 <table>
   <thead>
     <tr>
-      <th>Preco venda</th>
+      <th>Preço venda</th>
       <th>Quantidade</th>
       <th>Valor total</th>
       <th>Produto</th>
@@ -32,4 +44,4 @@
 
 <br>
 
-<%= link_to 'New Iten', new_iten_path %>
+<%= link_to 'Novo Iten', new_iten_path %>
