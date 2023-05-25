@@ -9,10 +9,6 @@
           <label class = 'control-label'> Quantidade</label>
           <input readonly="true" class = 'form-control' value="<%= @iten.quantidade %>" />  
       </div>
- <div class="col-lg-5 form-group"> 
-          <label class = 'control-label'>Valor Total</label>
-          <input readonly="true" class = 'form-control' value="<%= @iten.valor_total %>" />  
-      </div>
 
  <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Produto</label>
@@ -23,6 +19,15 @@
           <label class = 'control-label'>Venda</label>
           <input readonly="true" class = 'form-control' value="<%= @iten.venda_id %>" />  
       </div>
+      
+ <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Valor Total</label>
+          <input readonly="true" class = 'form-control' value="<%= @iten.valor_total %>" />  
+      </div>
 
-<%= link_to 'Edit', edit_iten_path(@iten) %> |
-<%= link_to 'Voltar', itens_path %>
+<div class="row">
+                <div class="col-lg-7 form-group">  
+                  <%= link_to 'Alterar Iten', edit_iten_path(@iten), :class => "btn btn-primary colorprimarybtn" %>
+                  <%= link_to 'Voltar',  itens_path, :class => "btn btn-primary colorprimarybtn"%>
+                </div>
+    </div>

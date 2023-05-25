@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @user.nome %>
-</p>
+<div class="row">  
+      <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Nome</label>
+          <input readonly="true" class = 'form-control' value="<%= @user.nome %>" />  
+      </div>
 
-<p>
-  <strong>Telefone:</strong>
-  <%= @user.telefone %>
-</p>
+ <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Telefone</label>
+          <input readonly="true" class = 'form-control' value="<%= @user.telefone %>" />  
+      </div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 

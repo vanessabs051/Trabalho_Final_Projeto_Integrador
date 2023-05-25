@@ -11,22 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :data %>
-    <%= form.date_select :data %>
-  </div>
+  <div class="row">
+ <div class="col-lg-8 form-group">   
+           <%= form.label :Data, :class => 'control-label required' %>
+           <%= form.text_field :Data,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :total %>
-    <%= form.text_field :total %>
-  </div>
+ <div class="col-lg-8 form-group">   
+           <%= form.label :Total, :class => 'control-label required' %>
+           <%= form.text_field :Total,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :total_pagar %>
-    <%= form.text_field :total_pagar %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <div class="col-lg-8 form-group">   
+           <%= form.label :total_pagar, :class => 'control-label required' %>
+           <%= form.text_field :total_pagar,  :class => 'form-control' %>
+       </div>
+
+
+  <div class="row">
+          <div class="col-lg-7 form-group">  
+            <%= link_to 'Voltar', vendas_path, :class => "btn btn-primary colorprimarybtn"%>
+            <input type="submit" name="commit" class="btn btn-primary colorprimarybtn" value="Salvar " data-disable-with="Salvando" />
+          </div>
+      </div>
 <% end %>

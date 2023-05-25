@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Syspadaria</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <style>
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+    </style>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+  <style>
+
+    :root {
+        --colorbasiclogin: #fff;
+        --colortextlogin: var(--colortext-menu); 
+    }
+
+      body {
+        background: #FFF;
+        font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #185a94;  margin-bottom: 0px;">
+    </nav>
+       
+  
+
+    <div class="wrapper">
+        <div class="content container-fluid">
+            <div class="container-fluid">
+              <%= yield %>
+            </div>
+          </div>
+    </div>
+
+  <%= render :partial => 'layouts/utilscripts' %>
+   
+</body>
+
+</html>

@@ -11,32 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :preco_venda %>
-    <%= form.text_field :preco_venda %>
-  </div>
+  <div class="row">
+ <div class="col-lg-8 form-group">   
+           <%= form.label :produto_id, :class => 'control-label required' %>
+           <%= form.text_field :produto_id,  :class => 'form-control' %>
+       </div>
+  <div class="col-lg-8 form-group">   
+           <%= form.label :quantidade, :class => 'control-label required' %>
+           <%= form.text_field :quantidade,  :class => 'form-control' %>
+       </div>
+   <div class="col-lg-8 form-group">   
+           <%= form.label :venda_id, :class => 'control-label required' %>
+           <%= form.text_field :venda_id,  :class => 'form-control' %>
+       </div>
+       <div class="col-lg-8 form-group">   
+           <%= form.label :preco_venda, :class => 'control-label required' %>
+           <%= form.text_field :preco_venda,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :quantidade %>
-    <%= form.number_field :quantidade %>
-  </div>
 
-  <div class="field">
-    <%= form.label :valor_total %>
-    <%= form.text_field :valor_total %>
-  </div>
+  <div class="col-lg-8 form-group">   
+           <%= form.label :valor_total, :class => 'control-label required' %>
+           <%= form.text_field :valor_total,  :class => 'form-control' %>
+       </div>
 
-  <div class="field">
-    <%= form.label :produto_id %>
-    <%= form.text_field :produto_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :venda_id %>
-    <%= form.text_field :venda_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <div class="row">
+          <div class="col-lg-7 form-group">  
+            <%= link_to 'Voltar', itens_path, :class => "btn btn-primary colorprimarybtn"%>
+            <input type="submit" name="commit" class="btn btn-primary colorprimarybtn" value="Salvar " data-disable-with="Salvando" />
+          </div>
+      </div>
 <% end %>
