@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                Visualizar Venda
+            </h2>
+        </div>
+    </div>
 
 <div class="row">  
       <div class="col-lg-5 form-group"> 
@@ -15,5 +22,9 @@
           <input readonly="true" class = 'form-control' value="<%= @venda.total_pagar %>" />  
       </div>
 
-<%= link_to 'Edit', edit_venda_path(@venda) %> |
-<%= link_to 'Back', vendas_path %>
+<div class="row">
+                <div class="col-lg-7 form-group">  
+                  <%= link_to 'Alterar Venda', edit_venda_path(@venda), :class => "btn btn-primary colorprimarybtn" %>
+                  <%= link_to 'Voltar',  venda_path, :class => "btn btn-primary colorprimarybtn"%>
+                </div>
+    </div>

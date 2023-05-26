@@ -35,9 +35,9 @@
         <td><%= produto.preco %></td>
         <td><%= produto.marca %></td>
         <td><%= produto.fornecedor_id %></td>
-        <td><%= link_to 'Show', produto %></td>
-        <td><%= link_to 'Edit', edit_produto_path(produto) %></td>
-        <td><%= link_to 'Destroy', produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', produto %></td>
+        <td><%= link_to 'Editar', edit_produto_path(produto) %></td>
+        <td><%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

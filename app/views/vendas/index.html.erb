@@ -31,9 +31,9 @@
         <td><%= venda.data %></td>
         <td><%= venda.total %></td>
         <td><%= venda.total_pagar %></td>
-        <td><%= link_to 'Show', venda %></td>
-        <td><%= link_to 'Edit', edit_venda_path(venda) %></td>
-        <td><%= link_to 'Destroy', venda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', venda %></td>
+        <td><%= link_to 'Editar', edit_venda_path(venda) %></td>
+        <td><%= link_to 'Excluir', venda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

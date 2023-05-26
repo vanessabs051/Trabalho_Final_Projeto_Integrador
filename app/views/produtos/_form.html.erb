@@ -36,6 +36,12 @@
            <%= form.text_field :marca,  :class => 'form-control' %>
        </div>
 
+         <div class="col-lg-5 form-group">   
+           <%= form.label :fornecedor_id, :class => 'control-label required' %>
+           <%= form.collection_select :fornecedor_id, Fornecedor.all, :id, :nome, {:prompt => 'Selecionar'}, :class => 'form-control',:required=>true %> 
+       </div>
+      </div>
+
    <div class="row">
           <div class="col-lg-7 form-group">  
            
