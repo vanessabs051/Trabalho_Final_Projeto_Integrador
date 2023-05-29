@@ -1,15 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                Visualizar Usuário
+            </h2>
+        </div>
+    </div>
 
 <div class="row">  
       <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Nome</label>
           <input readonly="true" class = 'form-control' value="<%= @user.nome %>" />  
       </div>
-
+      </div>
+<div class="row">
  <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Telefone</label>
           <input readonly="true" class = 'form-control' value="<%= @user.telefone %>" />  
       </div>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
+</div>
+<div class="row">
+                <div class="col-lg-7 form-group">  
+                  <%= link_to 'Alterar Usuário', edit_user_path(@user), :class => "btn btn-primary colorprimarybtn" %>
+                  <%= link_to 'Voltar',  users_path, :class => "btn btn-primary colorprimarybtn"%>
+                </div>
+    </div>
 

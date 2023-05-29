@@ -22,7 +22,7 @@
        </div>
    <div class="col-lg-8 form-group">   
            <%= form.label :venda_id, :class => 'control-label required' %>
-           <%= form.text_field :venda_id,  :class => 'form-control' %>
+           <%= form.collection_select :venda_id, Venda.all, :id, :total_pagar, {:prompt => 'Selecionar'}, :class => 'form-control',:required=>true %> 
        </div>
        <div class="col-lg-8 form-group">   
            <%= form.label :Preço_venda, :class => 'control-label required' %>

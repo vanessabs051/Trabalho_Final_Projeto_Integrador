@@ -12,27 +12,34 @@
           <label class = 'control-label'>Nome</label>
           <input readonly="true" class = 'form-control' value="<%= @produto.nome %>" />  
       </div>
-
+       </div>
+<div class="row"> 
 <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Quantidade</label>
           <input readonly="true" class = 'form-control' value="<%= @produto.quantidade %>" />  
+      </div> 
       </div>
 
+<div class="row"> 
 <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Validade</label>
           <input readonly="true" class = 'form-control' value="<%= @produto.validade %>" />  
+      </div> 
       </div>
 
+<div class="row"> 
 <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Preço</label>
           <input readonly="true" class = 'form-control' value="<%= @produto.preco %>" />  
       </div>
-
+       </div>
+<div class="row"> 
 <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Marca</label>
           <input readonly="true" class = 'form-control' value="<%= @produto.marca %>" />  
       </div>
-
+       </div>
+<div class="row"> 
  <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Fornecedor</label>
           <input readonly="true" class = 'form-control' value="<%= @produto.fornecedor.nome %>" />  
@@ -41,6 +48,6 @@
 <div class="row">
                 <div class="col-lg-7 form-group">  
                   <%= link_to 'Alterar Produto', edit_produto_path(@produto), :class => "btn btn-primary colorprimarybtn" %>
-                  <%= link_to 'Voltar',  produto_path, :class => "btn btn-primary colorprimarybtn"%>
+                  <%= link_to 'Voltar',  produtos_path, :class => "btn btn-primary colorprimarybtn"%>
                 </div>
     </div>

@@ -1,7 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Usuário</h1>
+<%= form_tag vendas_path( format:"html"), :method => 'get' do %>  
+      <div class="row">
+            <div class="col-lg-5  form-group">  
+                <%= text_field_tag :nome, params[:nome], :class => 'form-control', :placeholder=>"Digite o nome da venda para pesquisar" %>  
+              </div>
+              <div class="col-lg-2 form-group">
+                <%= submit_tag "Pesquisar", :class => "btn btn-primary colorprimarybtn" %>
+              </div>
 
+           <div class="col-lg-2 form-group">  
+                  <span class="input-group-btn" style="display: inline-block;"><button class="btn btn-primary colorprimarybtn" type="button" onclick="javascript: location.href='<%= new_venda_path %>';"><i class="fa fa-plus-circle"></i> Nova Venda</button></span>
+            </div>
+<%end%>
 <table>
   <thead>
     <tr>
