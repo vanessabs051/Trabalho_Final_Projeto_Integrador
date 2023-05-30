@@ -6,6 +6,17 @@ class FornecedorsController < ApplicationController
     @fornecedors = Fornecedor.all
   end
 
+  def relatorio
+    @fornecedors = Fornecedor.all
+    respond_to do |format|
+      format.pdf do
+          pdf = RelatorioFornecedorPdf.new(@fornecedors, @view_context) 
+          send_data pdf.render,
+          filename: "relatorio.pdf", type: "application/pdf", disposition: "inline"
+      end 
+    end
+  end
+
   # GET /fornecedors/1 or /fornecedors/1.json
   def show
   end
