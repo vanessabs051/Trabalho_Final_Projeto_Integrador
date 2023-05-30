@@ -19,6 +19,18 @@ class VendasController < ApplicationController
   def edit
   end
 
+
+  def relatorio
+    @vendas = Venda.all
+    respond_to do |format|
+      format.pdf do
+          pdf = RelatorioVendasPdf.new(@vendas, @view_context) 
+          send_data pdf.render,
+          filename: "relatorio.pdf", type: "application/pdf", disposition: "inline"
+      end 
+    end
+  end
+
   # POST /vendas or /vendas.json
   def create
     @venda = Venda.new(venda_params)

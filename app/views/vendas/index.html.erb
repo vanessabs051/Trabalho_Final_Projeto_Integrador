@@ -13,6 +13,9 @@
            <div class="col-lg-2 form-group">  
                   <span class="input-group-btn" style="display: inline-block;"><button class="btn btn-primary colorprimarybtn" type="button" onclick="javascript: location.href='<%= new_venda_path %>';"><i class="fa fa-plus-circle"></i> Nova Venda</button></span>
             </div>
+            <div class="col-lg-3 form-group">  
+                    <%= link_to "Relatório ", relatorio_vendas_path(format: 'pdf'), :target => "_blank", :class => "btn btn-primary colorprimarybtn" %>
+  </div>          </div>
 <%end%>
 <div class="table-responsive">
   <table class="table table-hover table-striped" cellpadding="0" cellspacing="0">

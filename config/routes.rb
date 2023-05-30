@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :itens
-  resources :vendas
+  resources :vendas, :path => "vendas" do
+    collection do
+      get "/relatorio"  => "vendas#relatorio", :as => "relatorio" 
+    end
+  end
   devise_for :users
   resources :produtos, :path => "produtos" do
     collection do

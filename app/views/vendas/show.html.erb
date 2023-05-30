@@ -13,18 +13,21 @@
           <input readonly="true" class = 'form-control' value="<%= @venda.data %>" />  
       </div>
 </div>
+<div class="row"> 
 <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Total</label>
           <input readonly="true" class = 'form-control' value="<%= @venda.total %>" />  
       </div>
+      </div>
+      <div class="row"> 
 <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Total Pagar</label>
           <input readonly="true" class = 'form-control' value="<%= @venda.total_pagar %>" />  
       </div>
-
+</div>
 <div class="row">
                 <div class="col-lg-7 form-group">  
                   <%= link_to 'Alterar Venda', edit_venda_path(@venda), :class => "btn btn-primary colorprimarybtn" %>
-                  <%= link_to 'Voltar',  venda_path, :class => "btn btn-primary colorprimarybtn"%>
+                  <%= link_to 'Voltar',  vendas_path, :class => "btn btn-primary colorprimarybtn"%>
                 </div>
     </div>
