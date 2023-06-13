@@ -3,7 +3,12 @@ class FornecedorsController < ApplicationController
 
   # GET /fornecedors or /fornecedors.json
   def index
-    @fornecedors = Fornecedor.all
+    if params[:nome] == nil
+      @fornecedors = Fornecedor.all.order("fornecedors.nome ASC").page(params[:page]).per(20)
+    else
+      #variavel que recebe pesquisa solicitada pelo usuario
+      @fornecedors = Fornecedor.all.where("fornecedors.nome ILIKE  '%"+params[:nome].strip+"%'").order("fornecedors.nome ASC").page(params[:page]).per(20)
+    end
   end
 
   def relatorio

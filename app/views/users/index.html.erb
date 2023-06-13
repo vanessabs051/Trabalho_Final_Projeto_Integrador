@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Usuário</h1>
-<%= form_tag vendas_path( format:"html"), :method => 'get' do %>  
+<%= form_tag users_path( format:"html"), :method => 'get' do %>  
       <div class="row">
             <div class="col-lg-5  form-group">  
                 <%= text_field_tag :nome, params[:nome], :class => 'form-control', :placeholder=>"Digite o nome da venda para pesquisar" %>  

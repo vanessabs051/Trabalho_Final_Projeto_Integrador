@@ -3,7 +3,12 @@ class ProdutosController < ApplicationController
 
   # GET /produtos or /produtos.json
   def index
-    @produtos = Produto.all
+    if params[:nome] == nil
+      @produtos =  Produto.all.order("produtos.nome ASC").page(params[:page]).per(20)
+    else
+      #variavel que recebe pesquisa solicitada pelo usuario
+      @produtos = Produto.all.where("produtos.nome ILIKE  '%"+params[:nome].strip+"%'").order("produtos.nome ASC").page(params[:page]).per(20)
+    end
   end
 
   def relatorio

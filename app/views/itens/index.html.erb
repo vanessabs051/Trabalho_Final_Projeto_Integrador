@@ -36,9 +36,9 @@
         <td><%= iten.valor_total %></td>
         <td><%= iten.produto_id %></td>
         <td><%= iten.venda_id %></td>
-        <td><%= link_to 'Show', iten %></td>
-        <td><%= link_to 'Edit', edit_iten_path(iten) %></td>
-        <td><%= link_to 'Destroy', iten, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', iten %></td>
+        <td><%= link_to 'Editar', edit_iten_path(iten) %></td>
+        <td><%= link_to 'Excluir', iten, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
